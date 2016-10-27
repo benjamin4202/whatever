@@ -1,0 +1,37 @@
+<div class="loader" data-loading>
+  <div class="loading_content">
+    <center>
+      <img src="/img/whatever_loading.gif" />
+      <p random-patience-quote ></p>
+    </center>
+  </div>
+</div>
+<div class="wrapper">
+  <header>
+      <img src="/img/uw.png" />
+  </header>
+  <article>
+    <section random-backgroundcolor ng-repeat="item in tweetList | orderBy:'-'">
+      <div class="tweet">
+            <div class="tweet_photo" ng-if="item.tweetPhoto">
+              <center>
+                <img class="img-responsive"  ng-src="{{ item.tweetPhoto }}" />
+              </center>
+            </div>
+            <div class="tweet_info_container">
+              <div class="tweet_msg">
+                <p>{{ item.tweetText }}</p> 
+              </div>
+              <div class="tweet_text">
+                <div class="tweet_text_header">
+                  <div class="tweet_date"> <img src="/img/calendar.png" /> {{ item.timeStamp | date:"MM/dd/yyyy" }}</div>
+                  <div class="user_name">
+                    <img check-image class="profile-image" ng-src="{{ item.profileImage }}" /> <a href="http://www.twitter.com/{{ item.screenName }}" target="_blank">{{ item.screenName }}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </section>
+  </article>
+</div>

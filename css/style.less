@@ -1,0 +1,128 @@
+// Color variables (appears count calculates by raw css)
+@c_black: #000000; // Appears 3 times
+@c_222: #222222; // Appears 2 times
+@c_white: #ffffff; // Appears 2 times
+
+// Width variables (appears count calculates by raw css)
+@w_full: 100%; // Appears 8 times
+@w_97: 97%; // Appears 2 times
+
+
+html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: url(/img/geometry2.png) repeat;
+	margin: 0;
+}
+header {
+	-moz-box-shadow: 0px 0px 8px 2px @c_black;
+	-webkit-box-shadow: 0px 0px 8px 2px @c_black;
+	background: #009999;
+	box-shadow: 0px 0px 8px 2px @c_black;
+	font-size: 72px;
+	height: 108px;
+	line-height: 108px;
+	position: fixed;
+	text-align: center;
+	transition: all 0.4s ease;
+	width: @w_full;
+	img {
+		padding-top:10px;
+		transition: all 0.4s ease;
+		width:200px;
+	}
+}
+article {
+	-moz-column-gap: 0;
+	-moz-column-width: 20em;
+	-webkit-column-gap: 0;
+	-webkit-column-width: 20em;
+	padding-top: 215px;
+}
+section {
+	display: inline-block;
+	padding: 5px;
+	transition: all 0.4s ease;
+	width: @w_full;
+	div.tweet_photo {
+		width: @w_97;
+	}
+	div.tweet>div.tweet_info_container {
+		width: @w_97;
+	}
+	div.tweet>div.tweet_info_container>div.tweet_msg {
+		background: @c_white;
+		float: left;
+		width: @w_full;
+	}
+	div.tweet>div.ng-scope>center>img.img-responsive {
+		height: auto;
+		width: @w_full;
+	}
+	div.tweet>div.tweet_info_container>div.tweet_text {
+		background: url(/img/lines.png) @c_white;
+		border-top: solid 1px #ABABAB;
+		float: left;
+		height: 35px;
+		width: @w_full;
+	}
+	div.tweet>div.tweet_info_container>div.tweet_text>div.tweet_text_header {
+		width: @w_full;
+	}
+	div.tweet>div.tweet_info_container>div.tweet_text>div.tweet_text_header>div.tweet_date {
+		color: @c_222;
+		float: left;
+		font-size: 17px;
+		padding: 10px;
+	}
+	div.tweet>div.tweet_info_container>div.tweet_text>div.tweet_text_header>div.user_name {
+		float: right;
+		padding: 10px;
+		a {
+			color: @c_222;
+			line-height: 23px;
+		}
+	}
+	div.tweet>div.tweet_text {
+		img {
+			height: auto;
+			max-width: @w_full;
+			padding-top: 5%;
+		}
+	}
+	div.tweet>div {
+		p {
+			font-size: 20px;
+			padding: 10px;
+		}
+	}
+}
+.profile-image {
+	height: 15px;
+	width: 15px;
+}
+.loader {
+	background: url(/img/geometry2.png);
+	height: 100%;
+	position: absolute;
+	transition: all 0.4s ease;
+	width: @w_full;
+	z-index: 99;
+	.loading_content {
+		margin-top: 20%;
+	}
+	p {
+		color: #383838;
+		font-family: Georgia, serif;
+		font-size: 18px;
+		font-style: italic;
+		line-height: 1.45;
+		margin: 0.25em 0;
+		padding: 0.25em 40px;
+		position: relative;
+		text-align: center;
+		width: 80%;
+	}
+}
